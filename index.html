@@ -1,0 +1,59 @@
+<!--
+File: index.html
+GUI Assignment: HW4 Multiplication Table Generator
+Timothy Retelle, UMass Lowell Computer Science, timothy_retelle@student.uml.edu
+Copyright (c) 2022 by Timothy Retelle. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author. This is a small site to generate multiplication tables.
+updated on June 23rd, 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<title>Multiplication Table Generator</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/black-tie/jquery-ui.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h1>Multiplication Table Generator</h1>
+		<h3>Enter the desired bounds, then hit the button to generate the table!</h3>
+		<form id="inputForm" onSubmit="generate(); return false">
+			<div>
+				<label for="topStart">Multiplicand Start</label>
+				<div>
+					<input type="text" id="topStart" placeholder="1" name="field1">
+				</div>
+				<div id="slider1"></div>
+			</div>
+			<div>
+				<label for="topEnd">Multiplicand End</label>
+				<div>
+					<input type="text" id="topEnd" placeholder="5" name="field2">
+				</div>
+				<div id="slider2"></div>
+			</div>
+			<div>
+				<label for="sideStart">Multiplier Start</label>
+				<div>
+					<input type="text" id="sideStart" placeholder="1" name="field3">
+				</div>
+				<div id="slider3"></div>
+			</div>
+			<div>
+				<label for="sideEnd">Multiplier End</label>
+				<div>
+					<input type="text" id="sideEnd" placeholder="5" name="field4">
+				</div>
+				<div id="slider4"></div>
+			</div>
+			<input type="submit" value ="Go!">
+		</form>
+		<div class="scrollbox">
+			<table id="multTable"></table><!--empty table for the output-->
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

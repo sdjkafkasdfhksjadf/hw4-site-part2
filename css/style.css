@@ -1,0 +1,77 @@
+/*
+File: style.css
+GUI Assignment: HW4 Multiplication Table Generator
+Timothy Retelle, UMass Lowell Computer Science, timothy_retelle@student.uml.edu
+Copyright (c) 2022 by Timothy Retelle. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author. This is a small site to generate multiplication tables.
+updated on June 23rd, 2022
+*/
+
+body {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.errorMessage {
+	color: red;
+}
+
+button {
+	background-color: black;
+	color: white;
+	border-color: white;
+	padding: 5px 30px;
+	margin-top: 15px;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+	border-color: white;
+	border-collapse: collapse; /*prevents a single white pixel from appearing when the table is empty */
+	
+	}
+.scrollbox { /* box that contains the table and makes it scrollable if its too big*/
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	height: 350px;
+	width: 50%;
+}
+
+table tr {
+	border: 1px solid;
+	border-color: white;
+	padding: 5px;
+	
+}
+table th {
+	position: sticky; /*stops headers from scrolling*/
+	top: 0;
+	left: 0;
+	border: 1px solid;
+	border-color: white;
+	padding: 5px;
+	background-color: blue;
+	font-weight: bold;
+	
+}
+table td {
+	border: 1px solid;
+	border-color: white;
+	padding: 5px;
+}
+
+form .error {
+  color: red;
+}
+
+.ui-slider {
+	margin-left: auto;
+	margin-right: auto;
+	width: 175px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
